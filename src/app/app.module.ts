@@ -30,6 +30,8 @@ import { ProductSalesChartComponent } from './charts/product-sales-chart/product
 import { SalesTrafficChartComponent } from './charts/sales-traffic-chart/sales-traffic-chart.component';
 import { AnnualSalesChartComponent } from './charts/annual-sales-chart/annual-sales-chart.component';
 import { StoreSessionsChartComponent } from './charts/store-sessions-chart/store-sessions-chart.component';
+import { DndCampComponent } from './dnd-camp/dnd-camp.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   imports: [
@@ -52,7 +54,8 @@ import { StoreSessionsChartComponent } from './charts/store-sessions-chart/store
     MatRadioModule,
     MatCardModule,
     ReactiveFormsModule,
-    ChartsModule
+    ChartsModule,
+    DragDropModule
   ],
   declarations: [
     AppComponent,
@@ -63,7 +66,8 @@ import { StoreSessionsChartComponent } from './charts/store-sessions-chart/store
     ProductSalesChartComponent,
     SalesTrafficChartComponent,
     AnnualSalesChartComponent,
-    StoreSessionsChartComponent
+    StoreSessionsChartComponent,
+    DndCampComponent
 
   ],
   providers: [],
