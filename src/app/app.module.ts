@@ -25,6 +25,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { ChartsModule } from 'ng2-charts';
+import { ProductSalesChartComponent } from './charts/product-sales-chart/product-sales-chart.component';
+import { SalesTrafficChartComponent } from './charts/sales-traffic-chart/sales-traffic-chart.component';
+import { AnnualSalesChartComponent } from './charts/annual-sales-chart/annual-sales-chart.component';
+import { StoreSessionsChartComponent } from './charts/store-sessions-chart/store-sessions-chart.component';
 
 @NgModule({
   imports: [
@@ -46,14 +51,19 @@ import { MatCardModule } from '@angular/material/card';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     EdiTableComponent,
     RegisTreeComponent,
-    FormMatComponent
+    FormMatComponent,
+    ProductSalesChartComponent,
+    SalesTrafficChartComponent,
+    AnnualSalesChartComponent,
+    StoreSessionsChartComponent
 
   ],
   providers: [],
