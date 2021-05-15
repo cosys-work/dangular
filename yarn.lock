@@ -236,13 +236,6 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/http@^7.2.16":
-  version "7.2.16"
-  resolved "https://registry.yarnpkg.com/@angular/http/-/http-7.2.16.tgz#f05337dd56faa86ce05b0dc378218a00fb337040"
-  integrity sha512-yvjbNyzFSmmz4UTjCdy5M8mk0cZqf9TvSf8yN5UVIwtw4joyuUdlgJCuin0qSbQOKIf/JjHoofpO2JkPCGSNww==
-  dependencies:
-    tslib "^1.9.0"
-
 "@angular/language-service@11.0.5":
   version "11.0.5"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-11.0.5.tgz#92499b5f29509142f29ae7af64b049765a7f7050"
@@ -1184,10 +1177,10 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
 
-"@ng-bootstrap/ng-bootstrap@8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-8.0.0.tgz#7e1b9dc8a147e61ec964af430d1941be377bbe1e"
-  integrity sha512-v77Gfd8xHH+exq0WqIqVRlxbUEHdA/2+RUJenUP2IDTQN9E1rWl7O461/kosr+0XPuxPArHQJxhh/WsCYckcNg==
+"@ng-bootstrap/ng-bootstrap@9.1.1":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-9.1.1.tgz#5a629915ea93b4f9b4d61854cb6862d99a7c9ca4"
+  integrity sha512-m31qKJylYueXm+a3YEoOfnrJYR1lovb7WgaQwvXQz3dDmtaYRX4n8aPeCMp1VrI7hFfFITKWo0GxPaI3JIFk4w==
   dependencies:
     tslib "^2.0.0"
 
