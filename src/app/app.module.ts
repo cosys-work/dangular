@@ -32,6 +32,8 @@ import { AnnualSalesChartComponent } from './charts/annual-sales-chart/annual-sa
 import { StoreSessionsChartComponent } from './charts/store-sessions-chart/store-sessions-chart.component';
 import { DndCampComponent } from './dnd-camp/dnd-camp.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   imports: [
@@ -55,7 +57,13 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatCardModule,
     ReactiveFormsModule,
     ChartsModule,
-    DragDropModule
+    DragDropModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   declarations: [
     AppComponent,
