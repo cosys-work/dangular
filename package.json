@@ -5,11 +5,11 @@
   "scripts": {
     "ng": "nx",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && yarn install",
     "postinstall": "node ./decorate-angular-cli.js"
   },
   "private": true,

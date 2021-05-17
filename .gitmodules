@@ -1,0 +1,3 @@
+[submodule "docker/couchdb/footon"]
+	path = docker/couchdb/footon
+	url = git@github.com:cosys-work/couchdb-fauxton.git
