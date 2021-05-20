@@ -1,4 +1,4 @@
-## Stage 1
+## Stage 1 - Will include CI/CD steps
 
 FROM node:14.17.0-alpine3.11
 
