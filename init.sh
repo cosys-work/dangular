@@ -5,7 +5,7 @@ npx nx build --prod
 docker build -t d-angular .
 
 if [[ "$(docker images -q d-angular-nginx:latest 2> /dev/null)" == "" ]]; then
-  docker kill d-angular-nginx
+  docker stop d-angular-nginx
   docker rm d-angular-nginx
 fi
 

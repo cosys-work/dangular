@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [ -z $COUCHDB_HOST ]; then
-  echo '$COUCHDB_HOST is not set, defaulting to' 'http://couchdb:5984'
-  export COUCHDB_HOST='http://couchdb:5984'
+  echo '$COUCHDB_HOST is not set, defaulting to' 'http://localhost:5984'
+  export COUCHDB_HOST='http://localhost:5984'
 fi
 
 export COUCHDB_DOMAIN=$(echo $COUCHDB_HOST | sed -E -e 's_.*://([^/@]*@)?([^/:]+).*_\2_')
@@ -18,12 +18,17 @@ until curl $COUCHDB_HOST || [ $WAIT_TIME -eq 600 ]; do
 done
 
 #CORS SETUP
-add-cors-to-couchdb $COUCHDB_HOST
+add-cors-to-couchdb $COUCHDB_HOST -u $COUCHDB_USER -p $COUCHDB_PASSWORD
 if [[ -z $INSTALL ]]; then
   INSTALLFLAG=""
 else
   INSTALLFLAG=-i
 fi
+
+## Essential buckets
+curl --user $COUCHDB_USER:$COUCHDB_PASSWORD -X PUT "$COUCHDB_HOST/_users"
+curl --user $COUCHDB_USER:$COUCHDB_PASSWORD -X PUT "$COUCHDB_HOST/_replicator"
+curl --user $COUCHDB_USER:$COUCHDB_PASSWORD -X PUT "$COUCHDB_HOST/_global_changes"
 
 #MIGRATOR
 # if [[ -z "${COUCHDB_USER}" ]]; then
