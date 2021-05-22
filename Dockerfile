@@ -1,4 +1,4 @@
-## Stage 1
+## Stage 1 - Will include CI/CD steps
 
 ## Stage 2
 FROM nginx:mainline
