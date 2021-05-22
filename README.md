@@ -1,4 +1,4 @@
-# [D-Angular]
+# D-Angular
 
 https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/
 
@@ -19,13 +19,13 @@ Finally `podman` and `buildah` based CI/CD pipeline that builds these devcubes a
 
 # Installation
 
-Once you have a system with nodejs lts and docker configured
+Once you have a system with nodejs lts and docker configured, install yarn and run the initialization script.
 
 1. Install yarn: `npm i -g yarn`.
 2. Then run init: `./init.sh`
 3. Navigate to [localhost:8080](localhost:8080)
 
-You can run init as many times as you want to see updates. We will update tweaks for a live dev pod later but till then encourage the more performant and synced local nx-ng-node based server for local dev environments.
+You can run init as many times as you want to see updates. We will update tweaks for a live dev pod later but till then we encourage the use of the more performant and synced option of local nx-ng-node based server for local dev environments using `nx serve` or `npx nx serve`.
 
 # Deployment
 
