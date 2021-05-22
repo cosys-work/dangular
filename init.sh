@@ -1,5 +1,5 @@
 #!/bin/bash
-yarn run install:clean
+yarn install
 npx nx build --prod
 
 docker build -t d-angular .
