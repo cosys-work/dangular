@@ -44,8 +44,6 @@ https://kubernetes.io/docs/reference/ K is for kubernetes, c is for curedit.
 4. kube-proxy - Can do simple TCP/UDP stream forwarding or round-robin TCP/UDP forwarding across a set of back-ends.
 
 5. cube-scheduler - Scheduler that manages availability, performance, and capacity.
-   Scheduler Policies
-   Scheduler Profiles
 
 
 # Mega Components
