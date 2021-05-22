@@ -1,32 +1,60 @@
-# [D-Angular](https://creativetimofficial.github.io/now-ui-dashboard-angular) [![version][version-badge]][CHANGELOG] [![license][license-badge]][LICENSE]
+# [D-Angular]
 
-![alt text](https://s3.amazonaws.com/creativetim_bucket/products/85/original/opt_nud_angular_thumbnail.jpg)
+https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/
 
-**[Dashboard Angular](https://creativetimofficial.github.io/now-ui-dashboard-angular)** is a responsive Bootstrap 4 kit provided for free by [Invision](https://www.invisionapp.com/) and [Creative Tim](https://www.creative-tim.com/). It combines colors that are easy on the eye, spacious cards, beautiful typography, and graphics. Now UI Dashboard comes packed with all plugins that you might need inside a project and documentation on how to get started. It is light and easy to use, and also very powerful.
+This dashboard is for a similar control plane as found in the above link. It coordinates all activities in your dashboard cluster:
+1. Scheduling dashboard grid processes
+2. Maintaining dashboard's current state clone
+3. Scaling dashboard grids
+4. Rolling out new updates
 
-Now UI Dashboard Angular has the same design characteristics as Now UI Kit Angular, so it is quite convenient to use them together. Or you can choose between them depending on the project at hand. If you love Now UI Kit Angular, you'll love Now UI Dashboard Angular.
-Create awesome, lifelike prototypes with InVision and Now so your users can experience and give feedback on your vision!
+A node is another borrowed concept common in cluster and graphs related docs that we have adopted in the context of this project to mean nodes of single responsibility dashboards.
+
+A node also has a cubelet which manages the node and its communications with the control plane. A node always exists as a parts of a triplet or a higher n-tuplet.
+
+Nodes communicate with the control plane node via the prox-e and/or prox-g API. The can be used in both the browser and the node/deno environments. Devcubes are available with minimal servers and static dashboards with dynamically updated data.
+
+Finally `podman` and `buildah` based CI/CD pipeline that builds these devcubes and production ready cubelets allow us to think in terms of pods, shared storage volumes, networking, node init config etc. 
 
 
-**Bootstrap 4 Support**
-Now UI Dashboard Angular is built on top of the much awaited Bootstrap 4. This makes starting a new project very simple. It also provides benefits if you are already working on a Bootstrap 4 project; you can just import the Now UI Dashboard Angular style over it. Most of the elements have been redesigned; but if you are using an element we have not touched, it will fall back to the Bootstrap default.
+# Installation
 
-**Example Pages**
-We wanted to fully display the power of this dashboard, so the kit comes packed with examples showing you how to use the components. Inside the product you will find:
+Once you have a system with nodejs lts and docker configured
 
-## Links:
-
-+ [Live Preview](https://creativetimofficial.github.io/now-ui-dashboard-angular)
-
-**Tutorial**
-In order for you to easily be able to use the Now UI Dashboard Angular, we have created a tutorial page in our documentation. It shows the structure for the files inside the archive and how to import them. It then features every components with a description and example how to use it. You can see the details [here](https://creativetimofficial.github.io/now-ui-dashboard-angular/documentation/tutorial).
-
-## Terminal Commands
-
-1. Install NodeJs from [NodeJs Official Page](https://nodejs.org/en) and run `npm i -g yarn`.
-2. Then: `./init.sh`
+1. Install yarn: `npm i -g yarn`.
+2. Then run init: `./init.sh`
 3. Navigate to [localhost:8080](localhost:8080)
 
+You can run init as many times as you want to see updates. We will update tweaks for a live dev pod later but till then encourage the more performant and synced local nx-ng-node based server for local dev environments.
+
+# Deployment
+
+Deployment steps using kubernetes services and lxd will be added here. Each node has its own all-stack-service center.
+
+# Meta Components
+
+https://kubernetes.io/docs/reference/ K is for kubernetes, c is for curedit.
+
+1.  cubelet - The primary agent that runs on each node. The cubelet takes a set of PodSpecs and ensures that the described containers are running and healthy.
+
+2. cube-api-server - REST API that validates and configures data for API objects such as pods, services, replication controllers.
+
+3. kube-controller-manager - Daemon that embeds the core control loops shipped with Kubernetes.
+
+4. kube-proxy - Can do simple TCP/UDP stream forwarding or round-robin TCP/UDP forwarding across a set of back-ends.
+
+5. cube-scheduler - Scheduler that manages availability, performance, and capacity.
+   Scheduler Policies
+   Scheduler Profiles
+
+
+# Mega Components
+
+1. Static Cards
+2. Stato-dynamic Card Grids
+3. Floating toolbars/headers/footers/sidebars
+4. Floating action buttons/prompts/symbols/clouds
+5. Hypergraph-based workspace grids
 
 [CHANGELOG]: ./CHANGELOG.md
 [LICENSE]: ./LICENSE
