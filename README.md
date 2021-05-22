@@ -1,5 +1,8 @@
 # D-Angular
 
+![alt text](https://s3.amazonaws.com/creativetim_bucket/products/85/original/opt_nud_angular_thumbnail.jpg)
+
+
 https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-intro/
 
 This dashboard is for a similar control plane as found in the above link. It coordinates all activities in your dashboard cluster:
